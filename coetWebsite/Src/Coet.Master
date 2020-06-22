@@ -1,0 +1,116 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Coet.master.cs" Inherits="coetWebsite.Src.Coet" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<title>
+		<asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder>
+	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+	<link rel="shortcutIcon" href="../img/logo.jpg" />
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+</head>
+<body data-spy="scroll" data-target=".navbar" 
+	<asp:ContentPlaceHolder ID="bodyScroll" runat="server"></asp:ContentPlaceHolder>
+	>
+	<form id="form1" runat="server">
+		<header class="text-white">
+		<a href="http://bgsbu.ac.in"><img src="../img/logo.jpg" class="logo m-2 rounded fixed-top" /></a>
+		<div class="d-md-flex justify-content-between">
+			<div id="branding">
+				<a href="main.aspx"><h1 id="priHead" class="text-white">College Of Engineering and Technology</h1></a>
+				<a href="http://bgsbu.ac.in"><h5 id="secHead" class="text-center text-white">Baba Ghulam Shah Badshah University</h5></a>
+			</div>
+			<ul class="nav justify-content-end mt-3 mr-2" id="rtnav">
+				<li class="nav-item"><a href="StuLogin.aspx" class="linkDesign1 text-white nav-link px-2 py-1 mr-3"><i class="fas fa-user-graduate mr-2"></i>Student Login</a></li>
+				<li class="nav-item"><a href="login.aspx" class="linkDesign1 text-white nav-link px-2 py-1"><i class="fas fa-chalkboard-teacher mr-2"></i>Staff Login</a></li>
+			</ul>
+		</div>
+		<nav class="navbar navbar-expand-md navbar-dark">
+			<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav ml-auto">
+					<asp:ContentPlaceHolder ID="navLinks" runat="server"></asp:ContentPlaceHolder>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+    <!-- Social link -->
+    <%--<div class="social">
+		<a href="https://www.facebook.com/coetbgsbu/"><img src="../img/fb.png" alt="COET"/></a>
+	</div>--%>
+
+	<!-- Side bars -->
+	<!-- Side bar links -->
+	<div class="sidelinks text-white">
+		<div class="quicklink linkDesign2 px-2 py-1">
+			<asp:ContentPlaceHolder ID="quicklink" runat="server"></asp:ContentPlaceHolder>
+		</div>
+		<div class="notiflink linkDesign2 px-2 py-1 mt-2">Notification</div>
+	</div>
+
+	<!-- Quick Links -->
+	<aside class="quickside text-white">
+		<asp:ContentPlaceHolder ID="leftcph" runat="server"></asp:ContentPlaceHolder>
+		<%--<h2 class="p-2 font-weight-bold">
+			<asp:ContentPlaceHolder ID="quicklinkTitle" runat="server"></asp:ContentPlaceHolder>
+		</h2>
+		<ul class="p-0">
+			<asp:ContentPlaceHolder ID="quicklinkLinks" runat="server"></asp:ContentPlaceHolder>
+		</ul>--%>
+	</aside>
+	<aside class="notifside text-white">
+		<h2 class="p-2 font-weight-bold">Notification</h2>
+		<ul class="p-0">
+			<li><a href="#" class="linkDesign1 my-2 text-white mx-auto w-75"><i class="fas fa-arrow-circle-right mx-2"></i>Time Table</a></li>
+			<li><a href="#" class="linkDesign1 my-2 text-white mx-auto w-75"><i class="fas fa-arrow-circle-right mx-2"></i>Link</a></li>
+			<li><a href="#" class="linkDesign1 my-2 text-white mx-auto w-75"><i class="fas fa-arrow-circle-right mx-2"></i>Link</a></li>
+			<li><a href="#" class="linkDesign1 my-2 text-white mx-auto w-75"><i class="fas fa-arrow-circle-right mx-2"></i>Link</a></li>
+			<li><a href="#" class="linkDesign1 my-2 text-white mx-auto w-75"><i class="fas fa-arrow-circle-right mx-2"></i>Date sheet</a></li>
+		</ul>
+	</aside>
+	
+	<!-- body -->
+	<asp:ContentPlaceHolder ID="centerCph" runat="server"></asp:ContentPlaceHolder>
+
+	<!-- footer -->
+	<footer class="page-footer text-white">
+		<div class="footer-copyright p-md-1 text-center m-0">
+			<div class="container">					
+				<ul class="nav justify-content-center mt-3">
+					<li class="nav-item">
+						<a class="nav-link text-white linkDesign1 px-2 py-1 mx-3" href="billdesk.aspx?id=1">Desclaimer</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white linkDesign1 px-2 py-1 mx-3" href="billdesk.aspx?id=2">Terms and Conditions</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white linkDesign1 px-2 py-1 mx-3" href="billdesk.aspx?id=3">Privacy Policy</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white linkDesign1 px-2 py-1 mx-3" href="billdesk.aspx?id=4">Refund/Cancellation Policy</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white linkDesign1 px-2 py-1 mx-3" href="billdesk.aspx?id=5">Services Offered</a>
+					</li>
+				</ul>
+			</div>
+			<div class="text-right mr-2">
+				<h6 class="mb-0"><a href="aboutUs.aspx#studentMembers" class="text-white">Designed by students of ITE-16</a></h6>
+			</div>
+		</div>
+	</footer>
+
+	<!-- scripts -->
+	<script src="../js/jquery-3.3.1min.js"></script>  
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/popper.min.js"></script>
+	<script src="../js/script.js"></script>
+	</form>
+</body>
+</html>
